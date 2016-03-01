@@ -14,9 +14,10 @@ defmodule Murumuru.Router do
   end
 
   scope "/", Murumuru do
-    pipe_through :browser # Use the default browser stack
+    # pipe_through :browser # Use the default browser stack
+    pipe_through :json # Use the default browser stack
 
-    get "/", PageController, :index
+    resources "/foods", FoodController, only: [:show]
   end
 
   # Other scopes may use custom stacks.
