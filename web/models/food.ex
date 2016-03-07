@@ -1,5 +1,5 @@
 import EctoEnum
-defenum UnitEnum, g: 0, oz: 1 
+defenum UnitEnum, g: 0, oz: 1
 
 defmodule Murumuru.Food do
   use Murumuru.Web, :model
@@ -11,7 +11,7 @@ defmodule Murumuru.Food do
     field :fat, :float
     field :calories, :float
     field :unit, UnitEnum
-
+    
     timestamps
   end
 

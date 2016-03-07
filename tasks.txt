@@ -1,0 +1,8 @@
+Tasks:
+  create a index route [√]
+  create a index controller action [√]
+  create an ecto model [√]
+  display ecto models data in json response [√]
+
+Nice to have:
+  figure out how to load files in (i.e., ecto_enum modules)
