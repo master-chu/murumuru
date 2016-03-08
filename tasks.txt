@@ -1,8 +1,26 @@
 Tasks:
-  create a index route [√]
-  create a index controller action [√]
-  create an ecto model [√]
-  display ecto models data in json response [√]
+  Foods
+    Index route
+      create a index route [√]
+      create a index controller action [√]
+      create an ecto model [√]
+      display ecto models data in json response [√]
+    Show route
+      create a show route [ ]
+      create a show controller action [ ]
+      display ecto model data in json response [ ]
+    Create route
+      create a create route [ ]
+      create a create controller action [ ]
+      display appropriate status in json response [ ]
+    Update route
+      create an update route [ ]
+      create an update controller action [ ]
+      display appropriate status in json response [ ]
+    Destroy route
+      create a destroy route [ ]
+      create a destroy controller action [ ]
+      display appropriate status in json response [ ]
 
 Nice to have:
-  figure out how to load files in (i.e., ecto_enum modules)
+  figure out how to load files in (i.e., ecto_enum modules) [ ]

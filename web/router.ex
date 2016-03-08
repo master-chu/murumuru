@@ -6,8 +6,8 @@ defmodule Murumuru.Router do
   end
 
   scope "/", Murumuru do
-    pipe_through :api # Use the default browser stack
+    pipe_through :api
 
-    resources "/foods", FoodController, only: [:index]
+    resources "/foods", FoodController, only: [:index, :show]
   end
 end
