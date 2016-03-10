@@ -6,17 +6,17 @@ defmodule Murumuru.Food do
 
   schema "foods" do
     field :name, :string
-    field :protein, :float
-    field :carbs, :float
-    field :fat, :float
-    field :calories, :float
-    field :unit, UnitEnum
-    
+    field :protein, :float, default: 0.0
+    field :carbs, :float, default: 0.0
+    field :fat, :float, default: 0.0
+    field :calories, :float, default: 0.0
+    field :unit, UnitEnum, default: :g
+
     timestamps
   end
 
-  @required_fields ~w(name protein carbs fat calories unit)
-  @optional_fields ~w()
+  @required_fields ~w(name)
+  @optional_fields ~w(protein carbs fat calories unit)
 
   @doc """
   Creates a changeset based on the `model` and `params`.
