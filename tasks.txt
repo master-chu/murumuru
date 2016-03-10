@@ -6,9 +6,9 @@ Tasks:
       create an ecto model [√]
       display ecto models data in json response [√]
     Show route
-      create a show route [ ]
-      create a show controller action [ ]
-      display ecto model data in json response [ ]
+      create a show route [√]
+      create a show controller action [√]
+      display ecto model data in json response [√]
     Create route
       create a create route [ ]
       create a create controller action [ ]
@@ -21,6 +21,9 @@ Tasks:
       create a destroy route [ ]
       create a destroy controller action [ ]
       display appropriate status in json response [ ]
+
+  Days
+    Create an ecto model with an association [ ]
 
 Nice to have:
   figure out how to load files in (i.e., ecto_enum modules) [ ]

@@ -12,4 +12,19 @@ defmodule Murumuru.FoodController do
     food = Repo.get(Food, food_id)
     render(conn, "show.json", food: food)
   end
+
+  def create(conn, %{"food" => food_params}) do
+    changeset = Food.changeset(%Food{}, food_params)
+    case Repo.insert(changeset) do
+      {:ok, food} ->
+        conn
+        |> put_status(:created)
+        |> put_resp_header("location", food_path(conn, :show, food))
+        |> render("show.json", food: food)
+      {:error, changeset} ->
+        conn
+        |> put_status(:unprocessable_entity)
+        |> render(Murumuru.ChangesetView, "error.json", changeset: changeset)
+    end
+  end
 end
