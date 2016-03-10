@@ -27,4 +27,10 @@ defmodule Murumuru.FoodController do
         |> render(Murumuru.ChangesetView, "error.json", changeset: changeset)
     end
   end
+
+  def delete(conn, %{"id" => food_id}) do
+    food = Repo.get!(Food, food_id)
+    Repo.delete!(food)
+    send_resp(conn, :no_content, "")
+  end
 end
