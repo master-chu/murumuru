@@ -29,4 +29,5 @@ Tasks:
     Create route [ ]
 
 Nice to have:
-  figure out how to load files in (i.e., ecto_enum modules) [ ]
+  Figure out what :scrub_params does
+  Figure out how to load files in (i.e., ecto_enum modules) [ ]
