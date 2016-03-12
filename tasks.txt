@@ -10,20 +10,23 @@ Tasks:
       create a show controller action [√]
       display ecto model data in json response [√]
     Create route
-      create a create route [ ]
-      create a create controller action [ ]
-      display appropriate status in json response [ ]
+      create a create route [√]
+      create a create controller action [√]
+      display appropriate status in json response [√]
     Update route
-      create an update route [ ]
-      create an update controller action [ ]
-      display appropriate status in json response [ ]
+      create an update route [√]
+      create an update controller action [√]
+      display appropriate status in json response [√]
     Destroy route
-      create a destroy route [ ]
-      create a destroy controller action [ ]
-      display appropriate status in json response [ ]
+      create a destroy route [√]
+      create a destroy controller action [√]
+      display appropriate status in json response [√]
 
   Days
     Create an ecto model with an association [ ]
+    Enforce uniqueness constraint on day's date [ ]
+    Show route [√]
+    Create route [ ]
 
 Nice to have:
   figure out how to load files in (i.e., ecto_enum modules) [ ]
