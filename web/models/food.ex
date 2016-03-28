@@ -2,6 +2,7 @@ defmodule Murumuru.Food do
   use Murumuru.Web, :model
 
   alias Murumuru.Enums
+  alias Murumuru.DayFood
 
   schema "foods" do
     field :name, :string
@@ -10,6 +11,9 @@ defmodule Murumuru.Food do
     field :fat, :float, default: 0.0
     field :calories, :float, default: 0.0
     field :unit, Enums.UnitEnum, default: :g
+
+    has_many :day_foods, DayFood
+    has_many :days, through: [:day_foods, :days]
 
     timestamps
   end

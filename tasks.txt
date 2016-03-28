@@ -30,6 +30,13 @@ Tasks:
       Appropriately handle empty params [ ]
       Handle saving nested/associated foods [ ]
 
+  DayFoods
+    Create a join table for the many-to-many relationship between foods and days [ ]
+      create the model [√]
+      create the migration [√]
+      update the food and day schemas [√]
+
+
 Nice to have:
   Figure out what :scrub_params does [√]
     - Answer: prevents sql injection (to an extent); also ensures a params root key

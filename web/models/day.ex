@@ -1,11 +1,14 @@
 defmodule Murumuru.Day do
   use Murumuru.Web, :model
   alias Murumuru.Food
+  alias Murumuru.DayFood
 
   schema "days" do
     field :date, Ecto.Date, default: Ecto.Date.utc
 
-    has_many :foods, Food
+    has_many :day_foods, DayFood
+    has_many :foods, through: [:day_foods, :foods]
+
     timestamps
   end
 
