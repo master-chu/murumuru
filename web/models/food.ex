@@ -1,8 +1,7 @@
-import EctoEnum
-defenum UnitEnum, g: 0, oz: 1
-
 defmodule Murumuru.Food do
   use Murumuru.Web, :model
+
+  alias Murumuru.Enums
 
   schema "foods" do
     field :name, :string
@@ -10,7 +9,7 @@ defmodule Murumuru.Food do
     field :carbs, :float, default: 0.0
     field :fat, :float, default: 0.0
     field :calories, :float, default: 0.0
-    field :unit, UnitEnum, default: :g
+    field :unit, Enums.UnitEnum, default: :g
 
     timestamps
   end

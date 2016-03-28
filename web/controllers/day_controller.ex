@@ -24,18 +24,19 @@ defmodule Murumuru.DayController do
     end
   end
   #
-  # def delete(conn, %{"id" => food_id}) do
-  #   food = Repo.get!(Food, food_id)
-  #   Repo.delete!(food)
+  # def delete(conn, %{"id" => day_id}) do
+  #   day = Repo.get!(Day, day_id)
+  #   Repo.delete!(day)
   #   send_resp(conn, :no_content, "")
   # end
   #
-  # def update(conn, %{"id" => food_id, "food" => food_params}) do
-  #   food = Repo.get!(Food, food_id)
-  #   changeset = Food.changeset(food, food_params)
+  # def update(conn, %{"id" => day_id, "day" => day_params}) do
+  #   day = Repo.get!(Day, day_id) |> Repo.preload(:foods)
+  #   IO.inspect day
+  #   changeset = Day.changeset(day, day_params)
   #   case Repo.update(changeset) do
-  #     {:ok, food} ->
-  #       render(conn, "show.json", food: food)
+  #     {:ok, day} ->
+  #       render(conn, "show.json", day: day)
   #     {:error, changeset} ->
   #       conn
   #       |> put_status(:unprocessable_entity)

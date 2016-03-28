@@ -23,11 +23,15 @@ Tasks:
       display appropriate status in json response [√]
 
   Days
-    Create an ecto model with an association [ ]
-    Enforce uniqueness constraint on day's date [ ]
+    Create an ecto model with an association [√]
+    Enforce uniqueness constraint on day's date [√]
     Show route [√]
     Create route [ ]
+      Appropriately handle empty params [ ]
+      Handle saving nested/associated foods [ ]
 
 Nice to have:
-  Figure out what :scrub_params does
-  Figure out how to load files in (i.e., ecto_enum modules) [ ]
+  Figure out what :scrub_params does [√]
+    - Answer: prevents sql injection (to an extent); also ensures a params root key
+  Figure out how to load files in (i.e., ecto_enum modules) [√]
+    - Answer: must use `.ex` file extension instead of `.exs`
