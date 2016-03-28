@@ -12,7 +12,8 @@ defmodule Murumuru.DayView do
   def render("day.json", %{day: day}) do
     %{
       id: day.id,
-      date: day.date
+      date: day.date,
+      foods: render_many(day.foods, Murumuru.FoodView, "food.json")
     }
   end
 end

@@ -26,6 +26,9 @@ Tasks:
     Create an ecto model with an association [√]
     Enforce uniqueness constraint on day's date [√]
     Show route [√]
+      Preload foods in Day controller [√]
+      Show associated foods [√]
+
     Create route [ ]
       Appropriately handle empty params [ ]
       Handle saving nested/associated foods [ ]
@@ -35,6 +38,7 @@ Tasks:
       create the model [√]
       create the migration [√]
       update the food and day schemas [√]
+
 
 
 Nice to have:
