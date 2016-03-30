@@ -24,6 +24,7 @@ defmodule Murumuru.DayController do
         |> render(Murumuru.ChangesetView, "error.json", changeset: changeset)
     end
   end
+  
   def update(conn, %{"id" => day_id, "foods" => food_ids}) do
     day_id = String.to_integer(day_id)
 
@@ -44,11 +45,11 @@ defmodule Murumuru.DayController do
         |> render(Murumuru.ChangesetView, "error.json", changeset: changeset)
     end
   end
-  #
-  # def delete(conn, %{"id" => day_id}) do
-  #   day = Repo.get!(Day, day_id)
-  #   Repo.delete!(day)
-  #   send_resp(conn, :no_content, "")
-  # end
-  #
+
+  def delete(conn, %{"id" => day_id}) do
+    day = Repo.get!(Day, day_id)
+    Repo.delete!(day)
+    send_resp(conn, :no_content, "")
+  end
+
 end

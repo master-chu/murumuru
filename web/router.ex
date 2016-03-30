@@ -8,7 +8,7 @@ defmodule Murumuru.Router do
   scope "/", Murumuru do
     pipe_through :api
 
-    resources "/foods", FoodController, only: [:index, :show, :create, :delete, :update]
-    resources "/days", DayController, only: [:show, :create, :update]
+    resources "/foods", FoodController, only: [:index, :show, :create, :update, :delete]
+    resources "/days", DayController, only: [:show, :create, :update, :delete]
   end
 end

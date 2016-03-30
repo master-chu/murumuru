@@ -23,7 +23,7 @@ Tasks:
       display appropriate status in json response [√]
     Add field for unit_count (e.g., 100 grams) [√]
     Add unique index on name-count-unit [√]
-    Display the unit_count on show [ ]
+    Display the unit_count on show [√]
 
   Days
     Create an ecto model with an association [√]
@@ -35,7 +35,6 @@ Tasks:
     Update route [ ]
       Standard update procedure [√]
       Add the ability to save associated foods [√]
-      Add notion of "count" [ ]
       Re-add the ability to modify a day's date [ ]
 
     Create route [ ]
@@ -49,6 +48,9 @@ Tasks:
       create the model [√]
       create the migration [√]
       update the food and day schemas [√]
+    Add notion of count [ ]
+      decide on input representation [ ]
+      decide on output representation [ ]
 
 
 Nice to have:

@@ -28,12 +28,6 @@ defmodule Murumuru.FoodController do
     end
   end
 
-  def delete(conn, %{"id" => food_id}) do
-    food = Repo.get!(Food, food_id)
-    Repo.delete!(food)
-    send_resp(conn, :no_content, "")
-  end
-
   def update(conn, %{"id" => food_id, "food" => food_params}) do
     food = Repo.get!(Food, food_id)
     changeset = Food.changeset(food, food_params)
@@ -45,5 +39,11 @@ defmodule Murumuru.FoodController do
         |> put_status(:unprocessable_entity)
         |> render(Throwaway.ChangesetView, "error.json", changeset: changeset)
     end
+  end
+
+  def delete(conn, %{"id" => food_id}) do
+    food = Repo.get!(Food, food_id)
+    Repo.delete!(food)
+    send_resp(conn, :no_content, "")
   end
 end
