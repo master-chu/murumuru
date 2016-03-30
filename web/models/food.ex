@@ -13,7 +13,7 @@ defmodule Murumuru.Food do
     field :unit, Enums.UnitEnum, default: :g
 
     has_many :day_foods, DayFood
-    has_many :days, through: [:day_foods, :days]
+    has_many :days, through: [:day_foods, :day]
 
     timestamps
   end

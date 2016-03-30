@@ -29,9 +29,17 @@ Tasks:
       Preload foods in Day controller [√]
       Show associated foods [√]
 
+    Update route [ ]
+      Standard update procedure [√]
+      Add the ability to save associated foods [√]
+      Add notion of "count" [ ]
+
     Create route [ ]
       Appropriately handle empty params [ ]
       Handle saving nested/associated foods [ ]
+
+  Unit
+    Consider pros and cons of using an enum vs a database table [ ]
 
   DayFoods
     Create a join table for the many-to-many relationship between foods and days [ ]

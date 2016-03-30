@@ -2,10 +2,10 @@ defmodule Murumuru.DayController do
   use Murumuru.Web, :controller
 
   alias Murumuru.Day
+  alias Murumuru.DayFood
 
   def show(conn, %{"id" => day_id}) do
     day = Repo.get(Day, day_id) |> Repo.preload(:foods)
-    IO.inspect(day.foods)
     render(conn, "show.json", day: day)
   end
 
@@ -24,6 +24,26 @@ defmodule Murumuru.DayController do
         |> render(Murumuru.ChangesetView, "error.json", changeset: changeset)
     end
   end
+  def update(conn, %{"id" => day_id, "foods" => food_ids}) do
+    day_id = String.to_integer(day_id)
+
+    Enum.each(food_ids, fn food_id ->
+      food_id = String.to_integer(food_id)
+      Repo.insert(%DayFood{day_id: day_id, food_id: food_id})
+    end)
+
+    day = Repo.get!(Day, day_id) |> Repo.preload(:foods)
+
+    changeset = Day.changeset(day, %{})
+    case Repo.update(changeset) do
+      {:ok, day} ->
+        render(conn, "show.json", day: day)
+      {:error, changeset} ->
+        conn
+        |> put_status(:unprocessable_entity)
+        |> render(Murumuru.ChangesetView, "error.json", changeset: changeset)
+    end
+  end
   #
   # def delete(conn, %{"id" => day_id}) do
   #   day = Repo.get!(Day, day_id)
@@ -31,17 +51,4 @@ defmodule Murumuru.DayController do
   #   send_resp(conn, :no_content, "")
   # end
   #
-  # def update(conn, %{"id" => day_id, "day" => day_params}) do
-  #   day = Repo.get!(Day, day_id) |> Repo.preload(:foods)
-  #   IO.inspect day
-  #   changeset = Day.changeset(day, day_params)
-  #   case Repo.update(changeset) do
-  #     {:ok, day} ->
-  #       render(conn, "show.json", day: day)
-  #     {:error, changeset} ->
-  #       conn
-  #       |> put_status(:unprocessable_entity)
-  #       |> render(Throwaway.ChangesetView, "error.json", changeset: changeset)
-  #   end
-  # end
 end
