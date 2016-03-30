@@ -17,7 +17,8 @@ defmodule Murumuru.FoodView do
       fat: food.fat,
       carbs: food.carbs,
       calories: food.calories,
-      unit: food.unit
+      unit: food.unit,
+      unit_count: food.unit_count
     }
   end
 end
