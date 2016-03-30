@@ -11,6 +11,7 @@ defmodule Murumuru.Food do
     field :fat, :float, default: 0.0
     field :calories, :float, default: 0.0
     field :unit, Enums.UnitEnum, default: :g
+    field :unit_count, :integer, default: 1
 
     has_many :day_foods, DayFood
     has_many :days, through: [:day_foods, :day]
@@ -19,7 +20,7 @@ defmodule Murumuru.Food do
   end
 
   @required_fields ~w(name)
-  @optional_fields ~w(protein carbs fat calories unit)
+  @optional_fields ~w(protein carbs fat calories unit unit_count)
 
   @doc """
   Creates a changeset based on the `model` and `params`.

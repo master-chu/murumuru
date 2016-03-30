@@ -21,6 +21,8 @@ Tasks:
       create a destroy route [√]
       create a destroy controller action [√]
       display appropriate status in json response [√]
+    Add field for unit_count (e.g., 100 grams) [√]
+    Add unique index on name-count-unit [ ]
 
   Days
     Create an ecto model with an association [√]
@@ -33,10 +35,10 @@ Tasks:
       Standard update procedure [√]
       Add the ability to save associated foods [√]
       Add notion of "count" [ ]
+      Re-add the ability to modify a day's date [ ]
 
     Create route [ ]
       Appropriately handle empty params [ ]
-      Handle saving nested/associated foods [ ]
 
   Unit
     Consider pros and cons of using an enum vs a database table [ ]
@@ -46,7 +48,6 @@ Tasks:
       create the model [√]
       create the migration [√]
       update the food and day schemas [√]
-
 
 
 Nice to have:
