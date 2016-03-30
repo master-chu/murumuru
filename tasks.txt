@@ -22,7 +22,8 @@ Tasks:
       create a destroy controller action [√]
       display appropriate status in json response [√]
     Add field for unit_count (e.g., 100 grams) [√]
-    Add unique index on name-count-unit [ ]
+    Add unique index on name-count-unit [√]
+    Display the unit_count on show [ ]
 
   Days
     Create an ecto model with an association [√]
