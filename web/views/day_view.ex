@@ -9,11 +9,13 @@ defmodule Murumuru.DayView do
     %{data: render_one(day, Murumuru.DayView, "day.json")}
   end
 
+  # Assumes you have preloaded :day_foods !!!
   def render("day.json", %{day: day}) do
     %{
       id: day.id,
       date: day.date,
-      foods: render_many(day.foods, Murumuru.FoodView, "food.json")
+      foods: render_many(day.day_foods, Murumuru.DayFoodView, "food.json")
     }
   end
+
 end

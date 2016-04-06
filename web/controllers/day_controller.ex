@@ -5,7 +5,7 @@ defmodule Murumuru.DayController do
   alias Murumuru.DayFood
 
   def show(conn, %{"id" => day_id}) do
-    day = Repo.get(Day, day_id) |> Repo.preload(:foods)
+    day = Repo.get(Day, day_id) |> Repo.preload(:day_foods)
     render(conn, "show.json", day: day)
   end
 
