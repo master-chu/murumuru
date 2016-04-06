@@ -40,6 +40,8 @@ Tasks:
     Create route [ ]
       Appropriately handle empty params [ ]
 
+    Delete route [√]
+
   Unit
     Consider pros and cons of using an enum vs a database table [ ]
 
@@ -49,7 +51,8 @@ Tasks:
       create the migration [√]
       update the food and day schemas [√]
     Add notion of count [ ]
-      decide on input representation [ ]
+      create migration [√]
+      decide on input representation [√]
       decide on output representation [ ]
 
 

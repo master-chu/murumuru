@@ -24,13 +24,13 @@ defmodule Murumuru.DayController do
         |> render(Murumuru.ChangesetView, "error.json", changeset: changeset)
     end
   end
-  
-  def update(conn, %{"id" => day_id, "foods" => food_ids}) do
+
+  def update(conn, %{"id" => day_id, "foods" => foods}) do
     day_id = String.to_integer(day_id)
 
-    Enum.each(food_ids, fn food_id ->
-      food_id = String.to_integer(food_id)
-      Repo.insert(%DayFood{day_id: day_id, food_id: food_id})
+    Enum.each(foods, fn food ->
+      %{"id" => food_id, "count" => count} = food
+      Repo.insert(%DayFood{day_id: day_id, food_id: food_id, count: count})
     end)
 
     day = Repo.get!(Day, day_id) |> Repo.preload(:foods)

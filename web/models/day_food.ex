@@ -8,6 +8,8 @@ defmodule Murumuru.DayFood do
     belongs_to :day, Day
     belongs_to :food, Food
 
+    field :count, :float, default: 1.0
+
     timestamps
   end
 
